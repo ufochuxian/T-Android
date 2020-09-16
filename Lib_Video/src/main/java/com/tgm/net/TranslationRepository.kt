@@ -1,4 +1,4 @@
-package com.tgm.translation
+package com.tgm.net
 
 import com.tgm.base.mvvm.m.BaseRepository
 import com.tgm.common.constant.AppConstant

@@ -1,4 +1,4 @@
-package com.tgm.translation
+package com.tgm.net
 
 import org.junit.Test
 

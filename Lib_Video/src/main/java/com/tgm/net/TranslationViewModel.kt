@@ -1,4 +1,4 @@
-package com.tgm.translation
+package com.tgm.net
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

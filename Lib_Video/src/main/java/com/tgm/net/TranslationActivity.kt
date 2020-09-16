@@ -1,19 +1,22 @@
-package com.tgm.translation
+package com.tgm.net
 
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.text.InputType
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.tgm.base.ktx.gone
 import com.tgm.base.ktx.toast
-import com.tgm.base.ktx.visible
 import com.tgm.common.constant.RouteUrl
 import com.tgm.common.ui.BaseActivity
-import com.tgm.translation.databinding.TranslationActivityTranslationBinding
+import com.tgm.net.databinding.TranslationActivityTranslationBinding
 import kotlinx.android.synthetic.main.translation_activity_translation.*
 
-
+/**
+ * @Author: QuYunShuo
+ * @Time: 2020/8/31
+ * @Class: TranslationActivity
+ * @Remark: 翻译主页
+ */
 @Route(path = RouteUrl.TranslationActivity)
 class TranslationActivity :
     BaseActivity<TranslationActivityTranslationBinding, TranslationViewModel>(TranslationViewModel::class.java) {
@@ -46,15 +49,15 @@ class TranslationActivity :
     }
 
     override fun initViewObserve() {
-        // 观察 ViewModel 的 translationLiveData,当其发生改变时,做出响应
-        mViewModel.translationLiveData.observe(this, { mBinding.mShowTv.text = it })
-        // Loading 图
-        mViewModel.isLoading.observe(this, {
-            if (it) {
-                mBinding.mLoadingLayout.visible()
-            } else {
-                mBinding.mLoadingLayout.gone()
-            }
-        })
+//        // 观察 ViewModel 的 translationLiveData,当其发生改变时,做出响应
+//        mViewModel.translationLiveData.observe(this, { mBinding.mShowTv.text = it })
+//        // Loading 图
+//        mViewModel.isLoading.observe(this, {
+//            if (it) {
+//                mBinding.mLoadingLayout.visible()
+//            } else {
+//                mBinding.mLoadingLayout.gone()
+//            }
+//        })
     }
 }

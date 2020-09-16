@@ -1,14 +1,8 @@
-package com.tgm.androidbaseframemvvm
+package com.tgm.android
 
 import com.tgm.common.CommonApplication
 import org.greenrobot.eventbus.EventBus
 
-/**
- * @Author: QuYunShuo
- * @Time: 2020/8/27
- * @Class: AppApplication
- * @Remark: 壳App的Application 负责需要写在App包下的初始化逻辑
- */
 class AppApplication : CommonApplication() {
 
     override fun initialize() {
@@ -19,4 +13,6 @@ class AppApplication : CommonApplication() {
             .installDefaultEventBus()
         super.initialize()
     }
+
+
 }

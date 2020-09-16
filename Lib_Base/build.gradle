@@ -43,6 +43,7 @@ kapt {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+
     api AndroidX.CoreKtx
     api AndroidX.AppCompat
     api AndroidX.ConstraintLayout
@@ -59,10 +60,16 @@ dependencies {
     api JetPack.LifecycleRuntimeKtx
     api JetPack.LifecycleViewModel
     api JetPack.LifecycleViewModelKtx
+    api JetPack.RoomRuntime
+    api JetPack.RoomKtx
+    kapt JetPack.RoomCompiler
 
     api GitHub.OkHttp
     api GitHub.OkHttpInterceptorLogging
+    api GitHub.Stetho
+    api GitHub.StethoOkhttp
     api GitHub.Retrofit
+    api GitHub.ConverterScalars
     api GitHub.RetrofitConverterGson
     api GitHub.Gson
     api GitHub.MMKV
@@ -79,6 +86,7 @@ dependencies {
     kapt GitHub.GlideCompiler
     kapt GitHub.ARouteCompiler
     kapt GitHub.EventBusAPT
+
 
     debugApi GitHub.Chuck
     debugApi GitHub.LeakCanary
