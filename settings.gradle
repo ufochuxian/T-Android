@@ -1,4 +1,4 @@
-include ':gsyVideoPlayer'
+//include ':gsyVideoPlayer'
 include ':Lib_Video'
 include ':Lib_Main'
 include ':Lib_Common'

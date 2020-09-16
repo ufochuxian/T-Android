@@ -5,12 +5,7 @@ import com.tgm.common.constant.AppConstant
 import com.tgm.common.net.NetRequest
 import com.tgm.common.utils.MD5
 
-/**
- * @Author: QuYunShuo
- * @Time: 2020/8/31
- * @Class: TranslationRepository
- * @Remark:
- */
+
 class TranslationRepository : BaseRepository() {
 
     /**

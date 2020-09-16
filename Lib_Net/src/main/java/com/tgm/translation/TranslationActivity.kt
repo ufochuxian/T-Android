@@ -13,12 +13,7 @@ import com.tgm.common.ui.BaseActivity
 import com.tgm.translation.databinding.TranslationActivityTranslationBinding
 import kotlinx.android.synthetic.main.translation_activity_translation.*
 
-/**
- * @Author: QuYunShuo
- * @Time: 2020/8/31
- * @Class: TranslationActivity
- * @Remark: 翻译主页
- */
+
 @Route(path = RouteUrl.TranslationActivity)
 class TranslationActivity :
     BaseActivity<TranslationActivityTranslationBinding, TranslationViewModel>(TranslationViewModel::class.java) {

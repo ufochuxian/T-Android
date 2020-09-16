@@ -10,12 +10,7 @@ import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
-/**
- * @Author: QuYunShuo
- * @Time: 2020/8/31
- * @Class: TranslationViewModel
- * @Remark:
- */
+
 class TranslationViewModel : BaseViewModel<TranslationRepository>() {
 
     override fun initRepository() = TranslationRepository()
