@@ -1,6 +1,6 @@
-package com.quyunshuo.androidbaseframemvvm
+package com.tgm.androidbaseframemvvm
 
-import com.quyunshuo.common.CommonApplication
+import com.tgm.common.CommonApplication
 import org.greenrobot.eventbus.EventBus
 
 /**

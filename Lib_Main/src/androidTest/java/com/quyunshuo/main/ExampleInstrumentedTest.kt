@@ -1,4 +1,4 @@
-package com.quyunshuo.main
+package com.tgm.main
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.quyunshuo.main.test", appContext.packageName)
+        assertEquals("com.tgm.main.test", appContext.packageName)
     }
 }

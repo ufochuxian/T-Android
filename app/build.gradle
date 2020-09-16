@@ -1,4 +1,4 @@
-import com.quyunshuo.androidbaseframemvvm.build.*
+import com.tgm.androidbaseframemvvm.build.*
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'

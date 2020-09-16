@@ -1,4 +1,4 @@
-package com.quyunshuo.androidbaseframemvvm.build
+package com.tgm.androidbaseframemvvm.build
 
 /**
  * 依赖库管理

@@ -1,6 +1,6 @@
 package debug
 
-import com.quyunshuo.common.CommonApplication
+import com.tgm.common.CommonApplication
 
 /**
  * @Author: QuYunShuo

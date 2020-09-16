@@ -1,4 +1,4 @@
-package com.quyunshuo.translation
+package com.tgm.translation
 
 import org.junit.Test
 

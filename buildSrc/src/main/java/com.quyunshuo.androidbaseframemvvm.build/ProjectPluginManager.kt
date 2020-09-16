@@ -1,4 +1,4 @@
-package com.quyunshuo.androidbaseframemvvm.build
+package com.tgm.androidbaseframemvvm.build
 
 /**
  * 项目级插件管理
