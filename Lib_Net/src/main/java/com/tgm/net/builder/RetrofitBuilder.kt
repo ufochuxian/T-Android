@@ -99,7 +99,7 @@ class RetrofitBuilder {
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .retryOnConnectionFailure(false)
                 .addInterceptor(loggingInterceptor)
-                .addInterceptor(HeaderInterceptor())
+//                .addInterceptor(HeaderInterceptor())
                 .addNetworkInterceptor(StethoInterceptor())
         /*val sslParams = SSLUtils.getSslSocketFactory()
         builder.sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager)*/

@@ -10,6 +10,7 @@ import android.util.Base64
 import okhttp3.Interceptor
 import okhttp3.Response
 import java.io.IOException
+import kotlin.jvm.Throws
 
 /**
 

@@ -19,7 +19,7 @@ internal class CoroutineCall<S : Any, E : Any>(val delegate: Call<S>,
     override fun enqueue(callback: Callback<TGMResponse<S, E>>) {
         delegate.enqueue(object : Callback<S> {
             override fun onFailure(call: Call<S>, t: Throwable) {
-                val networkResponse = when (t) {
+                val networkResponse  = when (t) {
                     is IOException -> TGMResponse.NetworkError(t)
                     else -> TGMResponse.UnknowError(t)
                 }

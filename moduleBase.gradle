@@ -79,5 +79,4 @@ dependencies {
     kapt GitHub.GlideCompiler
     kapt GitHub.ARouteCompiler
     kapt GitHub.EventBusAPT
-    implementation 'com.wajahatkarim3.easyflipviewpager:easyflipviewpager:2.0.0'
 }

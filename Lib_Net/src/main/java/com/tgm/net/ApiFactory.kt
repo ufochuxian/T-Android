@@ -1,10 +1,10 @@
 package com.tgm.net
 
 import android.content.Context
-import com.tgm.common.mgr.UrlMgr
+import com.tgm.base.config.AppUrlConfig
 import com.tgm.net.builder.RetrofitBuilder
 
-import com.tgm.net.config.AppUrlConfig
+import com.tgm.net.mgr.UrlMgr
 import okhttp3.OkHttpClient
 import retrofit2.CallAdapter
 import retrofit2.Converter
@@ -14,7 +14,7 @@ import java.util.*
 
  * @Auther: chen
 
- * @datetime: 2020/9/16
+ * @datetime: 2020/09/16
 
  * @desc:
 

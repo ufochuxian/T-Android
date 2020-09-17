@@ -27,7 +27,11 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    resourcePrefix "common_"
+    buildFeatures {
+        viewBinding = true
+    }
+
+    resourcePrefix "base_"
 }
 
 kapt {
@@ -39,10 +43,14 @@ kapt {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api project(path: ':Lib_Base')
-    api project(path: ':Lib_Net')
+    api Kotlin.Kotlin
+    api Kotlin.CoroutinesCore
+    api Kotlin.CoroutinesAndroid
 
-    kapt GitHub.GlideCompiler
-    kapt GitHub.ARouteCompiler
-    kapt GitHub.EventBusAPT
+    api JetPack.RoomRuntime
+    api JetPack.RoomKtx
+    kapt JetPack.RoomCompiler
+    api GitHub.Gson
+
+
 }

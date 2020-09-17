@@ -1,5 +1,76 @@
-apply from: '../moduleBase.gradle'
+import com.tgm.androidbaseframemvvm.build.*
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    resourcePrefix "translation_"
+    compileSdkVersion BuildConfig.compileSdkVersion
+    buildToolsVersion BuildConfig.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion BuildConfig.minSdkVersion
+        targetSdkVersion BuildConfig.targetSdkVersion
+        versionCode BuildConfig.versionCode
+        versionName BuildConfig.versionName
+        testInstrumentationRunner AndroidX.AndroidJUnitRunner
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    //根据不同的模式加载不同的AndroidManifest文件
+    sourceSets {
+        main {
+            if (BuildConfig.isAppMode) {
+                manifest.srcFile 'src/main/java/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    //排除debug文件夹下的所有文件
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    api project(path: ':Lib_Data')
+    api project(path: ':Lib_Base')
+
+    api GitHub.OkHttp
+    api GitHub.OkHttpInterceptorLogging
+    api GitHub.Stetho
+    api GitHub.StethoOkhttp
+    api GitHub.Retrofit
+    api GitHub.ConverterScalars
+    api GitHub.RetrofitConverterGson
+    api GitHub.Gson
+}
+android {
+    resourcePrefix "net_"
 }

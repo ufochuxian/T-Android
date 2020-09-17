@@ -20,8 +20,11 @@ interface TGMRestApi {
     @GET("/api/user")
     suspend fun getUserV2(): UserInfoEntity
 
-    @POST("/api/user/auth")
-    suspend fun loginV2(@Body loginParam: RequestBody): JLGLCommonResponse<UserInfoEntity>
+    @POST("user/login")
+    suspend fun reister(@Body hasMap: Map<String, String>) :  JLGLCommonResponse<UserInfoEntity>
+
+    @POST("/user/logout/json")
+    suspend fun login(@Body hasMap: Map<String, String>): JLGLCommonResponse<UserInfoEntity>
 
 }
 

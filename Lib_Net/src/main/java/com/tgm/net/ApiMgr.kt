@@ -37,7 +37,6 @@ class ApiMgr {
 
     open fun <K> createApi(cls: Class<K>): K {
         return ApiFactory.instance.createApi(cls)
-
     }
 
 

@@ -4,5 +4,6 @@ include ':Lib_Main'
 include ':Lib_Common'
 include ':Lib_Base'
 include ':Lib_Net'
+include ':Lib_Data'
 include ':app'
 rootProject.name = "TGM_Android"

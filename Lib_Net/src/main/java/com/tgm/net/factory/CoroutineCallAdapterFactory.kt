@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 
-class CoroutineCallAdapterFactory(var errorInterceptor: IApiErrorInterceptor? = null) : CallAdapter.Factory() {
+class CoroutineCallAdapterFactory(private var errorInterceptor: IApiErrorInterceptor? = null) : CallAdapter.Factory() {
 
 
     override fun get(returnType: Type, annotations: Array<Annotation>, retrofit: Retrofit): CallAdapter<*, *>? {

@@ -1,6 +1,7 @@
 package com.tgm.android
 
 import com.tgm.common.CommonApplication
+import com.tgm.net.ApiMgr
 import org.greenrobot.eventbus.EventBus
 
 class AppApplication : CommonApplication() {
@@ -12,6 +13,8 @@ class AppApplication : CommonApplication() {
 //            .addIndex()
             .installDefaultEventBus()
         super.initialize()
+
+        ApiMgr.instance.init(this)
     }
 
 

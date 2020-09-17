@@ -27,6 +27,7 @@ open class BaseApplication : Application() {
         // 腾讯 MMKV 初始化
         SpUtils.initMMKV(this)
 
+
         // 阿里路由 ARouter 初始化
         if (BuildConfig.DEBUG) {
             ARouter.openLog()     // 打印日志

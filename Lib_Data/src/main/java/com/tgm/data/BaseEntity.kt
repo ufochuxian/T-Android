@@ -12,4 +12,8 @@ open class BaseEntity<T> : Serializable {
 
     var data: T? = null
 
+    val errorCode:Int = -1
+
+    val errorMsg : String? = null
+
 }

@@ -1,4 +1,4 @@
-package com.tgm.common.config
+package com.tgm.base.config
 
 import android.content.Context
 
@@ -48,7 +48,7 @@ object AppConfig {
     }
 
     private fun setMode(mode: String) {
-        this.MODE = mode
+        MODE = mode
 //        PrefsUtils.mPrefs.edit(true) {
 //            putString(PrefsUtils.PREFS_KEY_APP_MODE, mode)
 //        }

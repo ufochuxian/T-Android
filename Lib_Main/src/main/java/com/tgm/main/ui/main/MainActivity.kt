@@ -36,6 +36,8 @@ class MainActivity :
                 .navigation()
             sheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
         }
+
+        mViewModel.getData()
     }
 
     override fun initViewObserve() {}

@@ -17,7 +17,7 @@ import com.tgm.data.UserInfoEntity.UserInfoData
  * @desc:
 
  */
-class UserInfoEntity : BaseEntity<UserInfoEntity.UserInfoData>(), Serializable {
+class UserInfoEntity : BaseEntity<UserInfoData>(), Serializable {
 
 
     @Entity(tableName = "user")
