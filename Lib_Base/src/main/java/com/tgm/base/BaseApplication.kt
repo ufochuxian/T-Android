@@ -4,8 +4,14 @@ import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
 import com.alibaba.android.arouter.launcher.ARouter
-import com.tgm.base.utils.SpUtils
+import com.dianping.logan.Logan
+import com.dianping.logan.LoganConfig
 import com.tencent.bugly.crashreport.CrashReport
+import com.tgm.base.config.LoganEncryptIV16
+import com.tgm.base.config.LoganEncryptKey16
+import com.tgm.base.utils.SpUtils
+import java.io.File
+
 
 open class BaseApplication : Application() {
 
@@ -37,6 +43,21 @@ open class BaseApplication : Application() {
 
         // Bugly 初始化 第三个参数为SDK调试模式开关
         CrashReport.initCrashReport(this, "申请的id", BuildConfig.DEBUG)
+
+        initLogan()
+    }
+
+    private fun initLogan() {
+        val config = LoganConfig.Builder()
+            .setCachePath(applicationContext.filesDir.absolutePath)
+            .setPath(
+                (applicationContext.getExternalFilesDir(null)?.absolutePath
+                        + File.separator) + "logan_v1"
+            )
+            .setEncryptKey16(LoganEncryptKey16.toByteArray())
+            .setEncryptIV16(LoganEncryptIV16.toByteArray())
+            .build()
+        Logan.init(config)
     }
 
     override fun attachBaseContext(base: Context?) {

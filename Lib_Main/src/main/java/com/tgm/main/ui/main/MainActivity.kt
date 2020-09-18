@@ -2,6 +2,7 @@ package com.tgm.main.ui.main
 
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
+import com.dianping.logan.Logan
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.tgm.common.constant.RouteUrl
 import com.tgm.common.ui.BaseActivity
@@ -25,6 +26,9 @@ class MainActivity :
                 resId = R.drawable.computer
             }
         }
+
+//        Logan.w("test logan", 1);
+
     }
 
     override fun initViewObserve() {}

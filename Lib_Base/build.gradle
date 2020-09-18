@@ -82,6 +82,7 @@ dependencies {
     api GitHub.Bugly
     api GitHub.PermissionX
     api GitHub.SpinKit
+    api GitHub.Logan
 
     kapt GitHub.GlideCompiler
     kapt GitHub.ARouteCompiler
