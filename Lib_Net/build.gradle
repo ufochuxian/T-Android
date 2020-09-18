@@ -30,6 +30,10 @@ android {
         viewBinding = true
     }
 
+    buildFeatures {
+        dataBinding true
+    }
+
     //根据不同的模式加载不同的AndroidManifest文件
     sourceSets {
         main {
