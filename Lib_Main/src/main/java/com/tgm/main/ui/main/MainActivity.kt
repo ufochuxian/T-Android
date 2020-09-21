@@ -7,6 +7,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.tgm.common.constant.RouteUrl
 import com.tgm.common.ui.BaseActivity
 import com.tgm.data.TestData
+import com.tgm.log.TGMLog
 import com.tgm.main.R
 import com.tgm.main.databinding.MainActivityMainBinding
 
@@ -26,6 +27,8 @@ class MainActivity :
                 resId = R.drawable.computer
             }
         }
+
+        TGMLog.v("eric", "timber test")
 
 //        Logan.w("test logan", 1);
 

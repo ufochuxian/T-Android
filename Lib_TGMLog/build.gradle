@@ -26,29 +26,11 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
-
-    buildFeatures {
-        dataBinding true
-    }
-
-    resourcePrefix "common_"
 }
 
-kapt {
-    arguments {
-        arg("AROUTER_MODULE_NAME", project.getName())
-    }
-}
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api project(path: ':Lib_Base')
-    api project(path: ':Lib_Net')
-    api project(path: ':Lib_Imgloader')
-    api project(path: ':Lib_TGMLog')
-
-    kapt GitHub.GlideCompiler
-    kapt GitHub.ARouteCompiler
-    kapt GitHub.EventBusAPT
+    api GitHub.TimerLog
 }
