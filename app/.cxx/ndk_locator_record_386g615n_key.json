@@ -1,0 +1,10 @@
+{
+  "ndkVersionFromDsl": "21.0.6113669",
+  "ndkDirProperty": "/Users/chen/Library/Android/sdk/ndk/21.3.6528147",
+  "sdkFolder": "/Users/chen/Library/Android/sdk",
+  "sideBySideNdkFolderNames": [
+    "20.0.5594570",
+    "21.3.6528147",
+    "21.0.6113669"
+  ]
+}

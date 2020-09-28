@@ -30,12 +30,8 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    buildFeatures {
-        viewBinding = true
-    }
-
-    buildFeatures {
-        dataBinding true
+    dataBinding {
+        enabled = true
     }
 
     //根据不同的模式加载不同的AndroidManifest文件

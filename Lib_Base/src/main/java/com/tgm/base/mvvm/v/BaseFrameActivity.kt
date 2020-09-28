@@ -2,15 +2,15 @@ package com.tgm.base.mvvm.v
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewbinding.ViewBinding
 import com.alibaba.android.arouter.launcher.ARouter
 import com.tgm.base.utils.EventBusRegister
 import com.tgm.base.utils.EventBusUtils
 
 
-abstract class BaseFrameActivity<VB : ViewBinding, VM : ViewModel>(private val vmClass: Class<VM>) :
+abstract class BaseFrameActivity<VB : ViewDataBinding, VM : ViewModel>(private val vmClass: Class<VM>) :
     AppCompatActivity() {
 
     protected val mViewModel: VM by lazy(mode = LazyThreadSafetyMode.NONE) {

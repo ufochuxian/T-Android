@@ -1,13 +1,13 @@
 package com.tgm.common.ui
 
 import androidx.annotation.ColorInt
+import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
-import androidx.viewbinding.ViewBinding
 import com.jaeger.library.StatusBarUtil
 import com.tgm.base.mvvm.v.BaseFrameActivity
 
 
-abstract class BaseActivity<VB : ViewBinding, VM : ViewModel>(vmClass: Class<VM>) :
+abstract class BaseActivity<VB : ViewDataBinding, VM : ViewModel>(vmClass: Class<VM>) :
     BaseFrameActivity<VB, VM>(vmClass) {
 
     /**

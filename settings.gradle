@@ -8,5 +8,8 @@ include ':Lib_Data'
 include 'Lib_Imgloader'
 include 'Lib_Empty'
 include 'Lib_TGMLog'
-include ':app'
-rootProject.name = "TGM_Android"
+include ':libcocos2dx'
+project(':libcocos2dx').projectDir = new File('/private/var/folders/zt/j4dxdfks7n18zmyy1cxs0j5w0000gn/T/CocosDashboard/CocosCreator234.app/Contents/Resources/cocos2d-x/cocos/platform/android/libcocos2dx')
+include ':cocos'
+project(':cocos').projectDir = new File(settingsDir, 'app')
+//rootProject.name = "TGMAndroid"
